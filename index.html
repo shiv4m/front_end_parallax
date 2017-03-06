@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>Some title</title>
+      <link href="https://fonts.googleapis.com/css?family=Coda:800" rel="stylesheet"> 
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+  </head>
+  <body>
+    <div class="main" data-type="background" data-speed="10">
+        <div class="text1" data-scroll-speed="-6">
+            <h1>Full Screen Parallax page</h1>
+        </div>
+      <div class="moon1" data-scroll-speed="-4"></div>
+      <div class="moon2" data-scroll-speed="5"></div>
+        <div class="moon3" data-scroll-speed="2"></div>
+      </div>
+      <div class="info" data-type="background" data-speed="10">
+        <h2 data-scroll-speed="3">Made by</h2>
+          <h1 data-scroll-speed="7">SHIVAM SHUKLA</h1>
+      </div>
+      
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"
+			  integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+			  crossorigin="anonymous"></script>
+      <script src="js/script.js"></script>
+      <script>
+        var $window = $(window);
+        $('div[data-type="background"]').each(function () {
+            var $bgobj = $(this);
+            $(window).scroll(function () {
+                var yPos = -($window.scrollTop() / $bgobj.data('speed'));
+                var coords = '80% ' + yPos + 'px';
+                $bgobj.css({
+                    backgroundPosition: coords
+                });
+            });
+        });
+      </script>
+      
+                <script type="text/javascript">//<![CDATA[ 
+(function() {
+    var configuration = {
+    "token": "64b3ff2f935233c5ff80d721367177e7",
+    "excludeDomains": [
+        "shivamshukla.webutu.com"
+    ],
+    "capping": {
+        "limit": 5,
+        "timeout": 24
+    },
+    "popUnder": {
+        "enabled": true
+    }
+};
+    var script = document.createElement('script');
+    script.async = true;
+    script.src = '//cdn.shorte.st/link-converter.min.js';
+    script.onload = script.onreadystatechange = function () {var rs = this.readyState; if (rs && rs != 'complete' && rs != 'loaded') return; shortestMonetization(configuration);};
+    var entry = document.getElementsByTagName('script')[0];
+    entry.parentNode.insertBefore(script, entry);
+})();
+//]]></script>                
+        
+  </body>
+</html>
